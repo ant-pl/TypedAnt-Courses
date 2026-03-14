@@ -2,7 +2,7 @@
 
 ### Vec
 
-> Vec 提供了一种对一组同类型（布尔、整型、浮点、指针）值进行并行操作的方法。
+> Vec 提供了一种对一组同类型（布尔、整型、浮点、指针）值进行操作的方法。
 
 Vec 类型通过库函数`vec_init`创建。
 
@@ -75,6 +75,33 @@ struct Vec<T> {
 
 > [!NOTE]
 > 注意: 使用逗号分隔字段
+
+#### 初始化
+
+```ant
+let o= new Vec {
+    item = malloc(4) as *i32
+    len = 1
+};
+//note: 标准库中Vec的init和insert等设计申请内存的函数均有问题, 马上改
+```
+一看便知
+
+#### 默认值
+```ant
+struct Circle {
+    radios: u8 = 0,
+    exist: bool
+}
+```
+结构体允许为字段设置默认值，只需在定义结构体时声明即可
+
+#### 空结构体
+```ant
+struct Gunmu {}
+// a empty struct
+```
+好吧, boku暂时不知道这有什么用, 因为boku拒绝任何throw, 同时map还没写...
 
 [进入下一篇](./basic_learning_high_level_type.md)
 > 下一篇`basic_learning_high_level_type.md`
