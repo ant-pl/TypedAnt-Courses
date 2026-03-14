@@ -20,7 +20,7 @@ func foo() {
 
 > [!NOTE]
 注意: 常量的命名规范为 **`大写下划线`**
-but! 大写是丑陋的, boku用小写, 这个注意你需要忽略...
+but! 大写是丑陋的, boku as a zig user用小写, 这个注意你可以忽略...
 
 ```ant
 extern "C" func printf(s: str, ...) -> i32;
