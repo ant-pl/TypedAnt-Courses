@@ -25,6 +25,9 @@ func main() -> i32 {
 }
 ```
 
+#### True 基本使用
+其实, 上面的`基本使用`基本没用, u may have to read [STL-Vec文档](./Vec.md)
+
 ### 指针
 > 作为一门语言，TypedAnt支持指针
 
