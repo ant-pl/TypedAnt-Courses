@@ -1,23 +1,15 @@
-# 基本学习
-`TypedAnt`的语法是类C的.
+## 变量
 
-## 变量声明与定义
-> 变量的声明和定义是编程语言中最基础且最常见的操作之一。
-
-### 变量声明
-> 变量是用于在内存中存储值的命名空间。
-
-在`TypedAnt`中，我们使用`let`关键字来声明变量，其格式为`let variable_name: Type = initial_value;`。以下是一个示例：
+在`TypedAnt`中，我们使用`let`关键字来声明变量，  
+其格式为`let variable_name: Type = initial_value;`。以下是一个示例：
 
 ```ant
-func foo() void {
+func foo() {
     //声明变量 variable 类型为u16, 并指定值为 666
-    let variable: u16 = 0;
-    variable = 666;
+    let variable: u16 = 0u16;
+    variable = 666u16;
 }
 ```
-> 提示
-目前 TypedAnt 遵循“非必要不使用变量”的原则，即尽可能使用常量。
 
 ### 标识符命名
 在`TypedAnt`中，标识符必须以字母或下划线开头，
@@ -26,13 +18,16 @@ func foo() void {
 ### 常量
 `TypedAnt`使用 const 关键字来声明常量。常量一旦声明并赋值后，其值便不可更改，只能在初次声明时进行赋值。
 
+> [!NOTE]
+注意: 常量的命名规范为 **`大写下划线`**
 
 ```ant
 extern "C" func printf(s: str, ...) -> i32;
-func foo() void {
-    const constant: u16 = 666;
 
-    printf("常量 constant 是%d\n", constant);
+const CONSTANT: u16 = 666u16;
+
+func foo() {
+    printf("常量 CONSTANT 是%d\n", CONSTANT);
 }
 ```
 
