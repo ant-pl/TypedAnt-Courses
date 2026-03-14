@@ -35,19 +35,5 @@ usize   无符号指针大小的整数
 
 在`TypedAnt`中，布尔值只有`true`和`false`两个。它们在内存中占用`1`个字节。
 
-### 函数
-> 函数是编程语言中最为基本的语句。
-
-#### 基本使用
-`TypedAnt`的函数结构清晰，你可以一眼看出其组成部分。我们来用一个简单的函数作为说明：
-```ant
-func foo(k: u8) -> u8 {
-    k+2
-}
-```
-> 如果你有任何语言的使用经验，一眼就可以看出来各自的作用。
-
-如果没有返回值，请删去`-> anytype`.
-
-[进入下一篇](https://github.com/langhat/TypedAnt-Courses/blob/main/docs/basic_learning_high_level_type.md)
+[进入下一篇](./basic_learning_high_level_type.md)
 > 下一篇`basic_learning_high_level_type.md`
