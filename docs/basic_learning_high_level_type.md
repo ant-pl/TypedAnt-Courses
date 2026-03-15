@@ -106,5 +106,5 @@ struct Gunmu {}
 ```
 好吧, boku暂时不知道这有什么用, 因为boku拒绝任何throw, 同时map还没写...
 
-[进入下一篇](./basic_learning_high_level_type.md)
-> 下一篇`basic_learning_high_level_type.md`
+[进入下一篇](./control.md)
+> 下一篇`control.md`
