@@ -19,8 +19,7 @@ func foo() {
 `TypedAnt`使用 const 关键字来声明常量。常量一旦声明并赋值后，其值便不可更改，只能在初次声明时进行赋值。
 
 > [!NOTE]
-注意: 常量的命名规范为 **`大写下划线`**
-but! 大写是丑陋的, boku as a zig user用小写, 这个注意你可以忽略...
+注意: 常量的命名规范为 **`大写下划线`**, 详见[TypedAnt风格指南](./style.md)
 
 ```ant
 extern "C" func printf(s: str, ...) -> i32;
@@ -31,6 +30,8 @@ func foo() {
     printf("常量 CONSTANT 是%d\n", CONSTANT);
 }
 ```
+
+这一章正式开始讲了, 所以你需要查看[TypedAnt风格指南](./style.md)
 
 [进入下一篇](https://github.com/langhat/TypedAnt-Courses/blob/main/docs/basic_learning_type.md)
 > 下一篇`basic_learning_type.md`
