@@ -33,5 +33,5 @@ func foo() {
 
 这一章正式开始讲了, 所以你需要查看[TypedAnt风格指南](./style.md)
 
-[进入下一篇](https://github.com/langhat/TypedAnt-Courses/blob/main/docs/basic_learning_type.md)
+[进入下一篇](./basic_learning_type.md)
 > 下一篇`basic_learning_type.md`

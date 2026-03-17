@@ -60,8 +60,43 @@ while(condition){
 defer 分别可以执行单个语句和一个块，并且如果控制流不经过 defer，则不会执行。
 
 ### panic
-`panic`是一个标准库函数, 被包含在`exception.ta`或`error.ta`中(未定)。
+`panic`是一个标准库函数, 被包含在`err.ta`中。
 它会让当前程序异常终止, 并视情况决定是否输出栈追踪, 用法类似`zig`的`unreachable`。
+
+### 跳转
+#### 函数调用
+like this:
+```ant
+funcName (arg1, arg2, ...)
+```
+#### 函数是?
+> 一个callable的对象
+
+函数你可以自己定义也可以使用库函数和外部函数
+
+#### 函数如何定义?
+```ant
+func <func name> ( [func args] ) [ -> <func return value type> ] {
+    //func body
+}
+```
+
+`func`是函数的定义必备的关键字, <func name>是该函数的名称,<br>
+[func args]是该函数的参数,<br>
+[ -> <func return value type> ]制定了该函数的返回值类型如果不指定则视为无返回值
+
+#### 外部函数是?
+> 函数体的实现（定义）位于当前代码的编译单元之外，需通过声明向当前上下文暴露函数接口，使其可被当前代码合法调用的函数。
+
+`TypedAnt`可以这么声明函数:
+```ant
+extern func <func name> ( [func args] ) [ -> <func return value type> ] ;
+```
+
+然后你可以在编译命令中加入`-l...`来把某个`.a`文件链接进来
+
+#### 库函数有哪些?
+请查阅库文档
 
 [进入下一篇](./basic_learning_high_level_type.md)
 > 下一篇`basic_learning_high_level_type.md`
