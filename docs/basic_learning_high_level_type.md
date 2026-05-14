@@ -1,40 +1,12 @@
 ## 高级类型
 
-### Vec
-
-> Vec 提供了一种对一组同类型（布尔、整型、浮点、指针）值进行操作的方法。
-
-Vec 类型通过库函数`vec_init`创建。
-
----
-
-#### 基本使用
-
-```ant
-use stl; // use 没写, 请直接替换为stl.ta的内容
-
-func main() -> i32 {
-    const v = vec_init<u8>(5);
-    vec_post(v,0,'h');
-    vec_post(v,1,'e');
-    vec_post(v,2,'l');
-    vec_post(v,3,'l');
-    vec_post(v,4,'o');
-    vec_insert(v,5,0);
-    vec_free(v);
-}
-```
-
-#### True 基本使用
-其实, 上面的`基本使用`基本没用, u may have to read [STL-Vec文档](./Vec.md)
-
 ### 指针
 > 作为一门语言，TypedAnt支持指针
 
 指针是内存地址。通过指针，我们可以间接访问和操作其指向的内存区域。
 
 取地址：通过`&`符号来获取变量的内存地址。  
-(**`我还没写`**)
+(**`还没写`**)
 
 解引用：通过`*`符号来解引用。
 
@@ -44,7 +16,7 @@ func main() -> i32 {
 extern "C" func malloc(size: usize) -> *u8;
 
 const ptr = malloc(4usize); //*i32类型
-ptr + 1usize; // 等价于 ptr + (sizeof i32) * 1
+ptr + 1usize; // 实际编译为 ptr + (sizeof i32) * 1
 ```
 
 ### 字符串
@@ -82,11 +54,10 @@ struct Vec<T> {
 #### 初始化
 
 ```ant
-let o= new Vec {
+let o = new Vec {
     item = malloc(4) as *i32
     len = 1
 };
-//note: 标准库中Vec的init和insert等设计申请内存的函数均有问题, 马上改
 ```
 一看便知
 
@@ -104,7 +75,6 @@ struct Circle {
 struct Gunmu {}
 // a empty struct
 ```
-好吧, boku暂时不知道这有什么用, 因为boku拒绝任何throw, 同时map还没写...
 
 [进入下一篇](./basic_learning_control.md)
 > 下一篇`basic_learning_control.md`
