@@ -12,7 +12,7 @@ func foo() {
 ```
 
 ### 标识符命名
-在`TypedAnt`中，标识符必须以字母或下划线开头，
+在`TypedAnt`中，标识符必须以字母或下划线开头，(已支持 unicode 标识符, 所以可以使用中文作为标识符)
 后跟任意字母、数字或下划线，并且不得与关键字重叠。
 
 ### 常量
@@ -24,14 +24,12 @@ func foo() {
 ```ant
 extern "C" func printf(s: str, ...) -> i32;
 
-const CONSTANT: u16 = 666u16;// this is ugly
+const CONSTANT: u16 = 666u16;
 
 func foo() {
     printf("常量 CONSTANT 是%d\n", CONSTANT);
 }
 ```
-
-这一章正式开始讲了, 所以你需要查看[TypedAnt风格指南](./style.md)
 
 [进入下一篇](./basic_learning_type.md)
 > 下一篇`basic_learning_type.md`
